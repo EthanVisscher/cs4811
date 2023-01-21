@@ -143,10 +143,13 @@ def lenLongestPalindrome(text):
     run in O(len(text)^2) time. 
     Consider defining a recurrence before you begin coding. 
     """
-    start = 0
-    for i in range(len(text) - 1):
-        if text.count(text[i]) == 1:
-            continue
+    if text == text[::-1]:
+        return len(text)
+    return 1
+        
+
+
+
 
 
 
